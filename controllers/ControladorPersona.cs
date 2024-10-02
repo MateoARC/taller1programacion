@@ -11,6 +11,8 @@ namespace PrimerProyecto.Controladores
         // Lista que almacena las personas
         private List<Persona> personas = new List<Persona>();
 
+        
+
         // Método para agregar una nueva persona a la lista
         public void AgregarPersona(Persona persona)
         {

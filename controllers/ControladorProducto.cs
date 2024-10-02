@@ -10,6 +10,7 @@ namespace PrimerProyecto.Controladores
     {
         // Lista que almacena los productos
         private List<Producto> productos = new List<Producto>();
+        
 
         // Método para agregar un nuevo producto a la lista
         public void AgregarProducto(Producto producto)

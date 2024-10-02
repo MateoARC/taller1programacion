@@ -11,6 +11,9 @@ namespace PrimerProyecto
         private static ControladorProducto controladorProducto = new ControladorProducto();
         private static ControladorVendedor controladorVendedor = new ControladorVendedor();
         private static ControladorFactura controladorFactura = new ControladorFactura();
+        private static ControladorCliente controladorCliente = new ControladorCliente();
+        private static ControladorEmpresa controladorEmpresa = new ControladorEmpresa();
+        //private static ControladorProductoPorFacturar controladorProductoPorFacturar = new controladorProductoPorFacturar();
 
         static void Main(string[] args)
         {
@@ -25,6 +28,9 @@ namespace PrimerProyecto
                 Console.WriteLine("2. Productos");
                 Console.WriteLine("3. Vendedores");
                 Console.WriteLine("4. Facturas");
+                Console.WriteLine("5. Clientes");
+                Console.WriteLine("6. Empresa");
+                Console.WriteLine("7. Producto Por Factura");
                 Console.WriteLine("0. Salir");
                 Console.Write("Elige una opción: ");
 
@@ -50,6 +56,15 @@ namespace PrimerProyecto
                     case 4:
                         MenuFacturas(); // Llamar al menú de facturas
                         break;
+                    case 5:
+                        controladorCliente.MenuCliente(); // llamar al menu de cliente
+                        break;    
+                    case 6:
+                        controladorEmpresa.MenuEmpresa(); //llamar al menu de empresa
+                        break;
+                    /*case 7:
+                        controladorProductoPorFacturar.MenuProductosPorFactura();//llamar la menu productos por factura 
+                        break;*/
                     case 0:
                         Console.WriteLine("Saliendo..."); // Mensaje de salida
                         break;
@@ -59,6 +74,9 @@ namespace PrimerProyecto
                 }
             } while (opcion != 0); // Continuar hasta que el usuario elija salir
         }
+
+
+        
 
         // Menú para manejar las operaciones de Personas
         static void MenuPersonas()

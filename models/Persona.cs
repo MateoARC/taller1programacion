@@ -20,15 +20,16 @@ namespace PrimerProyecto.Models
         // Lista privada que almacena las facturas asociadas a la persona
         private List<Factura> facturas;
 
+
         // Constructor de la clase Persona
         // Inicializa las propiedades de la persona con los valores proporcionados
         public Persona(int codigo, string email, string nombre, string telefono)
         {
-            Codigo = codigo; // Asigna el valor del código al atributo Codigo
-            Email = email; // Asigna el valor del email al atributo Email
-            Nombre = nombre; // Asigna el valor del nombre al atributo Nombre
-            Telefono = telefono; // Asigna el valor del teléfono al atributo Telefono
-            facturas = new List<Factura>(); // Inicializa la lista de facturas
+            this.Codigo = codigo; // Asigna el valor del código al atributo Codigo
+            this.Email = email; // Asigna el valor del email al atributo Email
+            this.Nombre = nombre; // Asigna el valor del nombre al atributo Nombre
+            this.Telefono = telefono; // Asigna el valor del teléfono al atributo Telefono
+            this.facturas = new List<Factura>(); // Inicializa la lista de facturas
         }
 
         // Método para agregar una factura a la lista de facturas de la persona

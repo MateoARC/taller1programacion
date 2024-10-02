@@ -18,7 +18,7 @@ namespace PrimerProyecto.Controladores
         }
 
         // Método para modificar las propiedades de un producto existente
-        public void ModificarProducto(int codigo, string nombre, int stock, decimal valorUnitario)
+        public void ModificarProducto(int codigo, string nombre, int stock, decimal valorUnitario, string Descripcion)
         {
             // Busca el producto en la lista por su código
             var producto = productos.Find(p => p.Codigo == codigo);
@@ -27,6 +27,7 @@ namespace PrimerProyecto.Controladores
                 producto.Nombre = nombre; // Modifica el nombre del producto
                 producto.Stock = stock; // Modifica el stock del producto
                 producto.ValorUnitario = valorUnitario; // Modifica el valor unitario del producto
+            
             }
         }
 

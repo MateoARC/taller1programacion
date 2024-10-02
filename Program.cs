@@ -70,7 +70,7 @@ namespace PrimerProyecto
                 Console.WriteLine("1. Agregar Persona");
                 Console.WriteLine("2. Modificar Persona");
                 Console.WriteLine("3. Eliminar Persona");
-                Console.WriteLine("4. Listar Personas");
+                Console.WriteLine("4. Listar Personas");    
                 Console.WriteLine("0. Volver al Menú Principal");
                 Console.Write("Elige una opción: ");
 
@@ -120,6 +120,7 @@ namespace PrimerProyecto
             Console.Write("Teléfono: ");
             string telefono = Console.ReadLine(); // Leer el teléfono
 
+
             // Crear una nueva instancia de Persona
             Persona persona = new Persona(codigo, email, nombre, telefono);
             controladorPersona.AgregarPersona(persona); // Agregar la persona a la lista
@@ -140,6 +141,7 @@ namespace PrimerProyecto
 
             Console.Write("Nuevo Teléfono: ");
             string telefono = Console.ReadLine(); // Leer el nuevo teléfono
+
 
             // Modificar la persona en la lista
             controladorPersona.ModificarPersona(codigo, email, nombre, telefono);
@@ -225,6 +227,7 @@ namespace PrimerProyecto
             Console.Write("Valor Unitario: ");
             decimal valorUnitario = decimal.Parse(Console.ReadLine()); // Leer el valor unitario
 
+
             // Crear una nueva instancia de Producto
             Producto producto = new Producto(codigo, nombre, stock, valorUnitario);
             controladorProducto.AgregarProducto(producto); // Agregar el producto a la lista
@@ -246,8 +249,11 @@ namespace PrimerProyecto
             Console.Write("Nuevo Valor Unitario: ");
             decimal valorUnitario = decimal.Parse(Console.ReadLine()); // Leer el nuevo valor unitario
 
+            Console.WriteLine("Nueva Descripcion: ");
+            string Descripcion = Console.ReadLine();
+
             // Modificar el producto en la lista
-            controladorProducto.ModificarProducto(codigo, nombre, stock, valorUnitario);
+            controladorProducto.ModificarProducto(codigo, nombre, stock, valorUnitario,Descripcion);
             Console.WriteLine("Producto modificado."); // Mensaje de confirmación
         }
 

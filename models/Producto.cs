@@ -15,14 +15,16 @@ namespace PrimerProyecto.Models
         // Propiedad que almacena el valor unitario del producto
         public decimal ValorUnitario { get; set; } 
 
+ 
+
         // Constructor de la clase Producto
         // Inicializa las propiedades del producto con los valores proporcionados
         public Producto(int codigo, string nombre, int stock, decimal valorUnitario)
         {
-            Codigo = codigo; // Asigna el valor del código al atributo Codigo
-            Nombre = nombre; // Asigna el valor del nombre al atributo Nombre
-            Stock = stock; // Asigna el valor del stock al atributo Stock
-            ValorUnitario = valorUnitario; // Asigna el valor unitario al atributo ValorUnitario
+            this.Codigo = codigo; // Asigna el valor del código al atributo Codigo
+            this.Nombre = nombre; // Asigna el valor del nombre al atributo Nombre
+            this.Stock = stock; // Asigna el valor del stock al atributo Stock
+            this.ValorUnitario = valorUnitario; // Asigna el valor unitario al atributo ValorUnitario
         }
     }
 }
